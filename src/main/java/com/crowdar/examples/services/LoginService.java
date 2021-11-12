@@ -1,8 +1,7 @@
 package com.crowdar.examples.services;
 
 import com.crowdar.core.actions.MobileActionManager;
-import com.crowdar.driver.DriverManager;
-import com.crowdar.examples.constants.LoginConstants;
+import com.crowdar.examples.constants.LoginHomeConstants;
 import org.testng.Assert;
 
 /**
@@ -13,13 +12,20 @@ import org.testng.Assert;
 public class LoginService {
 
     public static void doLogin(String email, String password){
-        MobileActionManager.setInput(LoginConstants.EMAIL_INPUT_LOCATOR, email);
-        MobileActionManager.setInput(LoginConstants.PASSWORD_INPUT_LOCATOR, password);
-        MobileActionManager.click(LoginConstants.SIGN_IN_BUTTON_LOCATOR);
+        MobileActionManager.setInput(LoginHomeConstants.MAIL_INPUT_LOCATOR, email);
+        MobileActionManager.setInput(LoginHomeConstants.PASSWORD_INPUT_LOCATOR, password);
+        MobileActionManager.click(LoginHomeConstants.LOGIN_BUTTON_LOCATOR);
     }
 
-    public static void isViewLoaded(){
-        MobileActionManager.waitVisibility(LoginConstants.SIGN_UP_BUTTON_LOCATOR);
-        Assert.assertTrue(MobileActionManager.isVisible(LoginConstants.EMAIL_INPUT_LOCATOR), LoginConstants.VIEW_NOT_DISPLAYED_MESSAGE);
+    public static void isHomepageViewLoaded(){
+        MobileActionManager.waitVisibility(LoginHomeConstants.TIME_ENTRIES_LOCATOR);
+        Assert.assertTrue(MobileActionManager.isVisible(LoginHomeConstants.TIME_ENTRIES_LOCATOR), LoginHomeConstants.PROJECTS_DISPLAYED_MESSAGE);
     }
+
+    public static void isViewLoaded() {
+        MobileActionManager.waitVisibility(LoginHomeConstants.LOGIN_PAGE_CHECKER);
+        Assert.assertTrue(MobileActionManager.isVisible(LoginHomeConstants.LOGIN_BUTTON_LOCATOR), LoginHomeConstants.VIEW_NOT_DISPLAYED_MESSAGE);
+    }
+
+
 }
