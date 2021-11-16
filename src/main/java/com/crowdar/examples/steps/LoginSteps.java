@@ -1,13 +1,10 @@
 package com.crowdar.examples.steps;
 
 import com.crowdar.core.PageSteps;
-import com.crowdar.core.actions.MobileActionManager;
-import com.crowdar.examples.constants.LoginHomeConstants;
 import com.crowdar.examples.services.LoginService;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import io.cucumber.java.en.And;
-import cucumber.api.java.en.Then;
 
 
 /**

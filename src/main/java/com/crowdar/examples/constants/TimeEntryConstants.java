@@ -2,12 +2,6 @@ package com.crowdar.examples.constants;
 
 public class TimeEntryConstants {
 
-    public static final String USERNAME_INPUT_LOCATOR = "ACCESSIBILITY_ID:usernameInputSignUp";
-    public static final String EMAIL_INPUT_LOCATOR = "ACCESSIBILITY_ID:emailAddressInputSignUp";
-    public static final String PASSWORD_INPUT_LOCATOR = "ACCESSIBILITY_ID:passwordInputSignUp";
-    public static final String SIGN_UP_BUTTON_LOCATOR = "ACCESSIBILITY_ID:signUpButtonSignUp";
-
-
     public static final String ADD_ENTRY_BUTTON = "id:floating_action_button";
     public static final String VIEW_NOT_DISPLAYED_MESSAGE = "Time Entry Home page is not displayed.";
     public static final String LABEL_ENTRY_LOCATOR = "id:toolbar_title";

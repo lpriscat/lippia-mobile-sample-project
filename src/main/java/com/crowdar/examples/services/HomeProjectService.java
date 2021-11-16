@@ -3,7 +3,6 @@ package com.crowdar.examples.services;
 import com.crowdar.core.actions.MobileActionManager;
 import com.crowdar.examples.constants.HomeProjectConstants;
 import com.crowdar.examples.constants.LoginHomeConstants;
-import com.crowdar.examples.constants.TimeEntryConstants;
 import org.testng.Assert;
 
 /**

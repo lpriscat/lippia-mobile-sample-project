@@ -8,9 +8,9 @@
     <version>1.0.0</version>
 
     <parent>
-       <groupId>io.lippia</groupId>
-       <artifactId>root</artifactId>
-       <version>3.2.3.8</version>
+        <groupId>io.lippia</groupId>
+        <artifactId>root</artifactId>
+        <version>3.2.3.8</version>
     </parent>
 
     <properties>
@@ -62,7 +62,7 @@
                 <crowdar.projectType>MOBILE_IOS</crowdar.projectType>
             </properties>
         </profile>
-    	<profile>
+        <profile>
             <id>BrowserStack</id>
             <properties>
                 <cucumber.runner>testng.xml</cucumber.runner>
@@ -77,9 +77,9 @@
 
     <dependencies>
         <dependency>
-                <groupId>io.lippia</groupId>
-                <artifactId>core</artifactId>
-                <version>${project.parent.version}</version>
+            <groupId>io.lippia</groupId>
+            <artifactId>core</artifactId>
+            <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>io.lippia.report</groupId>
@@ -100,8 +100,8 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M4</version>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M4</version>
                 <configuration>
                     <useSystemClassLoader>false</useSystemClassLoader>
                     <suiteXmlFiles>
@@ -113,11 +113,11 @@
     </build>
 
     <repositories>
-		<repository>
-			<id>crowdarRepo</id>
-			<name>crowdar-repository</name>
-			<url>https://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/</url>
-		</repository>
-	</repositories>
+        <repository>
+            <id>crowdarRepo</id>
+            <name>crowdar-repository</name>
+            <url>https://nexus-v3-repositories.automation.crowdaronline.com/repository/maven-public/</url>
+        </repository>
+    </repositories>
 
 </project>

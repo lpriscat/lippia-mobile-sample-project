@@ -22,8 +22,18 @@ public class LoginService {
         Assert.assertTrue(MobileActionManager.isVisible(LoginHomeConstants.TIME_ENTRIES_LOCATOR), LoginHomeConstants.PROJECTS_DISPLAYED_MESSAGE);
     }
 
+    public static void isViewLoaded2() {
+
+    }
+
     public static void isViewLoaded() {
-        MobileActionManager.waitVisibility(LoginHomeConstants.LOGIN_PAGE_CHECKER);
+        //MobileActionManager.getWait();
+/*        MobileActionManager.click(LoginHomeConstants.LOGIN_SHEIT_POPUP);
+        MobileActionManager.waitVisibility(LoginHomeConstants.LOGIN_SHEIT_POPUP);
+        MobileActionManager.waitVisibility(FIRST_ITEM_LIST);
+        MobileActionManager.getElement(LoginHomeConstants.LOGIN_SHEIT_POPUP).sendKeys(Keys.RETURN);*/
+        //MobileActionManager.waitVisibility(LoginHomeConstants.LOGIN_PAGE_CHECKER);
+        MobileActionManager.waitVisibility(LoginHomeConstants.MAIL_INPUT_LOCATOR);
         Assert.assertTrue(MobileActionManager.isVisible(LoginHomeConstants.LOGIN_BUTTON_LOCATOR), LoginHomeConstants.VIEW_NOT_DISPLAYED_MESSAGE);
     }
 

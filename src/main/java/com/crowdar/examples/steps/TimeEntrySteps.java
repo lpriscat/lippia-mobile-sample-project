@@ -1,8 +1,11 @@
 package com.crowdar.examples.steps;
 
 import com.crowdar.core.PageSteps;
+import com.crowdar.examples.services.HomeProjectService;
+import com.crowdar.examples.services.LoginService;
 import com.crowdar.examples.services.TimeEntryService;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -11,6 +14,7 @@ import io.cucumber.java.en.When;
  * Otherwise, if it is a simple action, like clicking a button and it has nothing related to business logic, is correct to put here.
  */
 public class TimeEntrySteps extends PageSteps {
+
 
     @When("the user clicks on project")
     public void theUserClicksOnProject() {
@@ -23,5 +27,12 @@ public class TimeEntrySteps extends PageSteps {
     @Then("the user verifies that the <task> has been loaded successfully")
     public void theUserVerifiesThatTheTaskHasBeenLoadedSuccessfully() {
         TimeEntryService.checkTimeEntriesPage();
+    }
+
+    @Given("The user logins  with (.*) and (.*)")
+    public void theUserLoginsWithEmailAndPassword(String email, String password)
+    {
+        LoginService.doLogin(email, password);
+        HomeProjectService.isViewLoaded();
     }
 }

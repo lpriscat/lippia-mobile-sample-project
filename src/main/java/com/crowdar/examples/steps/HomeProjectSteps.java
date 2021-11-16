@@ -1,13 +1,12 @@
 package com.crowdar.examples.steps;
 
 import com.crowdar.core.PageSteps;
-import com.crowdar.core.actions.MobileActionManager;
-import com.crowdar.examples.constants.HomeProjectConstants;
 import com.crowdar.examples.services.HomeProjectService;
-import cucumber.api.java.en.Given;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import com.crowdar.examples.services.LoginService;
+
 
 /**
  * This class handles the steps in the features files and connects with the service in case of having business logic.
@@ -15,12 +14,15 @@ import io.cucumber.java.en.When;
  */
 public class HomeProjectSteps extends PageSteps {
 
-    @io.cucumber.java.en.Given("The user is logged in successfully")
-    public void theUserIsLoggedInSuccessfully() {
-        HomeProjectService.isViewLoaded();
+    @io.cucumber.java.en.Given("The user logins successfully with (.*) and (.*)")
+    public void theUserIsLoggedInSuccessfully(String email, String password) {
+        LoginService.doLogin(email, password);
+            HomeProjectService.isViewLoaded(); //after login
+
+
     }
 
-    @io.cucumber.java.en.When("The user taps on the hamburger menu")
+    @When("The user taps on the hamburger menu")
     public void isProjectHomePageVisible()  {
         HomeProjectService.userTapsHamburger();
     }

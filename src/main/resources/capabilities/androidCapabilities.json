@@ -2,22 +2,8 @@
   "deviceName": "{{deviceName}}",
   "app": "{{app}}",
   "platformName": "Android",
-  "deviceId": "192.168.0.186:6666",
   "resetKeyboard": "true",
   "unicodeKeyboard": "true",
   "appPackage": "me.clockify.android",
   "appActivity": "me.clockify.android.presenter.SplashActivity"
 }
-
-/*
-{
-  "deviceName": "{{deviceName}}",
-  "app": "{{app}}",
-  "platformName": "Android",
-  "deviceId": "192.168.0.186:6666",
-  "avd": "{{avd}}",
-  "resetKeyboard": "true",
-  "unicodeKeyboard": "true",
-  "appPackage": "me.clockify.android",
-  "appActivity": "me.clockify.android.presenter.SplashActivity"
-}*/
